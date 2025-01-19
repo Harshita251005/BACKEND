@@ -1,0 +1,12 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "folder1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node folder1.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
