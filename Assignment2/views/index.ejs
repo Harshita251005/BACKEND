@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>TODO LIST</h1>
+        
+        <div class="top-bar">
+            <input type="text" id="task-input" placeholder="Add new task">
+            <button id="add-task-btn">➕</button>
+            <button id="theme-toggle">🌗</button>
+        </div>
+
+        <ul id="task-list">
+            <% tasks.forEach(task => { %>
+                <li data-id="<%= task.id %>">
+                    <div class="task-content">
+                        <input type="checkbox" class="task-checkbox" <%= task.completed ? "checked" : "" %> >
+                        <span class="task-text <%= task.completed ? 'completed' : '' %>"><%= task.title %></span>
+                    </div>
+                    <div class="task-buttons">
+                        <button class="edit-btn">✏️</button>
+                        <button class="delete-btn">🗑</button>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+</body>
+</html>
